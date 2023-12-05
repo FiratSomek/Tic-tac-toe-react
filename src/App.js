@@ -6,7 +6,7 @@ const App = () => {
   const [go, setGo] = useState("circle");
   const [winningMessage, setWinningMessage] = useState(null);
 
-  const message = "it is now " + go + "'s go ";
+  const message = "It is now " + go + "'s go !";
 
   const checkScore = () => {
     const winningCombos = [
@@ -35,6 +35,9 @@ const App = () => {
   useEffect(() => {
     checkScore();
   }, [cells]);
+
+  useEffect(() => {});
+
   return (
     <div className="app">
       <div className="gameboard">
@@ -51,7 +54,7 @@ const App = () => {
           />
         ))}
       </div>
-      <p>{winningMessage || message}</p>
+      <p className="info">{winningMessage || message}</p>
     </div>
   );
 };
