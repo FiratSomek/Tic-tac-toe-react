@@ -36,8 +36,6 @@ const App = () => {
     checkScore();
   }, [cells]);
 
-  useEffect(() => {});
-
   return (
     <div className="app">
       <div className="gameboard">
